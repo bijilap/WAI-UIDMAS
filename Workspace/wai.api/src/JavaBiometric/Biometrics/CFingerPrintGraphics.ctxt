@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=CFingerPrintGraphics()
+comment1.params=width\ height
+comment1.target=CFingerPrintGraphics(int,\ int)
+comment2.params=m_image\ max\ min
+comment2.target=BufferedImage\ BinerizeImage(BufferedImage,\ int,\ int)
+comment3.params=m_original_image
+comment3.target=BufferedImage\ getGreyFingerPrintImage(BufferedImage)
+numComments=4

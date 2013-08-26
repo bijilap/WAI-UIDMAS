@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=path1\ path2
+comment0.target=CEntityForm(String,\ String)
+comment1.params=e
+comment1.target=void\ jButtonStep1_actionPerformed(ActionEvent)
+comment2.params=e
+comment2.target=void\ jButtonStep2_actionPerformed(ActionEvent)
+comment3.params=e
+comment3.target=void\ jButtonStep3_actionPerformed(ActionEvent)
+comment4.target=void\ result()
+comment5.params=e
+comment5.target=void\ jButtonStep4_actionPerformed(ActionEvent)
+numComments=6

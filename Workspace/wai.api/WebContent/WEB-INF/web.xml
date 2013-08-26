@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>wai.api</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description>Login WAI API</description>
+    <display-name>LoginToWaiApi</display-name>
+    <servlet-name>LoginToWaiApi</servlet-name>
+    <servlet-class>wai.api.login.LoginToWaiApi</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginToWaiApi</servlet-name>
+    <url-pattern>/LoginToWaiApi</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>Verify Person Using Biometrics</description>
+    <display-name>VerifyPerson</display-name>
+    <servlet-name>VerifyPerson</servlet-name>
+    <servlet-class>wai.api.verifyPerson.VerifyPerson</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VerifyPerson</servlet-name>
+    <url-pattern>/VerifyPerson</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>Logout From Api Safely</description>
+    <display-name>LogoutFromApi</display-name>
+    <servlet-name>LogoutFromApi</servlet-name>
+    <servlet-class>wai.api.logoutFromApi.LogoutFromApi</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutFromApi</servlet-name>
+    <url-pattern>/LogoutFromApi</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>VerifyCredentials</display-name>
+    <servlet-name>VerifyCredentials</servlet-name>
+    <servlet-class>wai.api.verifyCredentials.VerifyCredentials</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VerifyCredentials</servlet-name>
+    <url-pattern>/VerifyCredentials</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>VerifyCardInfo</display-name>
+    <servlet-name>VerifyCardInfo</servlet-name>
+    <servlet-class>wai.api.verifyCheckSum.VerifyCardInfo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VerifyCardInfo</servlet-name>
+    <url-pattern>/VerifyCardInfo</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>RealCardPic</display-name>
+    <servlet-name>RealCardPic</servlet-name>
+    <servlet-class>wai.api.verifyCheckSum.RealCardPic</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RealCardPic</servlet-name>
+    <url-pattern>/RealCardPic</url-pattern>
+  </servlet-mapping>
+</web-app>

@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=CFingerPrint()
+comment1.params=width\ height
+comment1.target=CFingerPrint(int,\ int)
+comment10.target=int\ getFingerPrintClassification()
+comment11.target=double[]\ getFingerPrintTemplate()
+comment11.text=\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\n\#\ \ \ \ \ Extract\ Template\ \ \ \ \ \ \ \ \ \#\n\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\n\nThe\ template\ will\ have\ to\ be\ formated\ according\ to\ the\ ISO\ standards\ as\ set\ out\ buy\nNIST\ ,\ NIST\ also\ has\ a\ set\ of\ binary\ pictures\ to\ use\ for\ examples.\ This\ database\ is\ used\ for\ndetermaning\ the\ FAR(False\ Acceptance\ Rate)\ and\ FRR\ (False\ Rejection\ Rate)\n\nFirst\ 7\ are\ (elements\ in\ array\ ,\ originx\ ,\ originy\ ,\ null\ ,\ null\ ,\ null\ ,null)\nThe\ format\ is\ (x,y,r,degree\ ,number\ of\ ends,resultant\ degree)\ the\ 0\ element\ in\ the\ array\ \nis\ the\ size.\n\nThere\ is\ also\ future\ work\ that\ needs\ to\ be\ done\ on\ genralization\ ,\ basicly\ what\ this\ means\ is\ \nthat\ you\ take\ 3\ finger\ templates\ ,\ then\ take\ the\ features\ that\ are\ common\ to\ all\ three\ templeate\nand\ you\ will\ then\ come\ out\ with\ a\ generalized\ template.This\ will\ improve\ quality\ of\ the\ template.\n\n
+comment12.params=finger
+comment12.target=String\ ConvertFingerPrintTemplateDoubleToString(double[])
+comment13.params=finger
+comment13.target=double[]\ ConvertFingerPrintTemplateStringToDouble(String)
+comment14.params=finger1\ finger2\ threshold\ fastmatch
+comment14.target=int\ Match(double[],\ double[],\ int,\ boolean)
+comment14.text=\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\n\#\ \ \ \ \ \ \ \ \ Matching\ \ \ \ \ \ \ \ \ \ \ \ \ \#\n\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\n\nSomething\ to\ possably\ look\ at\ are\n\nDistance\ \=\ (X1\ -X2)^2\ +\ (Y1\ -\ Y2)^2.\ The\ Error_Rating\ ,\ if\ a\ image\ is\ is\ to\ the\ left\ or\nright\ or\ even\ at\ a\ angle\ the\ distance\ betwwen\ matched\ points\ will\ always\ be\ the\ same.\n\ncross-corelation\ algorithm\n\nThe\ algotrithim\ could\ use\ classifications\ to\ speed\ it\ up\ and\ check\ that\ the\ feature\ndirection\ to\ improve\ the\ faulse\ acceptance\ rate.\ \ \n\n
+comment2.params=width\ height\ MatchPointDistanceMovement\ MatchPointRotationMovment\ MatchThreshold
+comment2.target=CFingerPrint(int,\ int,\ int,\ int,\ int)
+comment3.params=m_image
+comment3.target=void\ setFingerPrintImage(BufferedImage)
+comment4.target=BufferedImage\ getFingerPrintImage()
+comment5.target=BufferedImage\ getFingerPrintImageDetail()
+comment6.target=void\ ThinningHilditch()
+comment7.target=void\ ThinningHitAndMiss()
+comment8.params=ChainLinkDistance
+comment8.target=void\ ChaneLinkAlgorithm(int)
+comment9.target=Point\ getFingerPrintOrigin()
+comment9.text=\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\n\#\ \ \ \ \ Extract\ Origin\ \ \ \ \ \ \ \ \ \ \ \#\n\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\n\nIn\ future\ i\ want\ to\ use\ the\ gradients\ to\ classifie\ the\ finger\ print\ into\ the\ 5\ different\ \ncatagories\ which\ are\ marked\ in\ the\ FP_CLASS.\n\nThis\ function\ still\ needs\ to\ improved\ and\ somtimes\ dosen't\ find\ the\ center\ of\ the\ finger\ print.\n\nThe\ principle\ in\ finding\ the\ centre\ is\ simple\ ,\ just\ find\ the\ greatest\ change\ in\ the\ gradient\nbettween\ two\ lines\ and\ you\ have\ your\ centre.\n\nTo\ find\ the\ classification\ you\ have\ to\ find\ the\ average\ changes\ in\ gradients\ in\ the\ different\ \nsectors\ (if\ you\ divided\ your\ picture\ in\ 4\ using\ the\ fingerprint\ centre\ as\ the\ centre).You\ should\ \nthen\ classifie\ the\ fingerprint\ according\ to\ this.\n
+numComments=15

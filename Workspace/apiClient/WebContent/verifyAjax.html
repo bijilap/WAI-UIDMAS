@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="article">
+          <h2><span>Verify Person</span></h2>
+          <div class="clr"></div>
+          <p>Verify a person by providing his fingerprints.</p>
+	</div>
+	<form action="/wai.api/VerifyPerson" method="post" enctype="multipart/form-data" id="verifyForm" target="myFrame">
+		<table>
+		<tr>
+			<td><div align="right">UID: </div></td>
+			<td><div align="left"><input type="text" name="UID" id="UID" /></div></td>
+		</tr>
+		<tr>
+			<td><div align="right"></div></td>
+			<td><div align="left"></div></td>
+		</tr>
+		<tr>
+			<td><div align="right">Hand: </div></td>
+			<td><div align="left"><input type="text" name="hand" id="hand"></div></td>
+		</tr>
+		<tr>
+			<td><div align="right"></div></td>
+			<td><div align="left"></div></td>
+		</tr>
+		<tr>
+			<td><div align="right">Finger: </div></td>
+			<td><div align="left"><input type="text" name="finger" id="finger"></div></td>
+		</tr>
+		<tr>
+			<td><div align="right"></div></td>
+			<td><div align="left"></div></td>
+		</tr>
+		<tr>
+			<td><div align="right">Fingerprint: </div></td>
+			<td><div align="left"><input type="file" name="image" id="image"></div></td>
+		</tr>
+		<tr>
+			<td><div align="right"></div></td>
+			<td><div align="left"></div></td>
+		</tr>
+		<tr>
+			<td><div align="right"></div></td>
+			<td><div align="center"><input type="submit" name="submit" id="submit" value="Submit" onClick="verifyIntoFrame()"></div></td>
+		</tr>
+		</table>
+	</form>
+	<div class="clr"></div>
+	<div id="result" style="visibility: hidden;">
+	<h2><iframe id="myFrame" name="myFrame" style="visibility: hidden;width: 0px;height: 0px;border: none;" scrolling="no"></iframe></h2>
+	</div>
+</body>
+</html>
