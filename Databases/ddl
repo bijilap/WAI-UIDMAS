@@ -1,0 +1,452 @@
+-- This CLP file was created using DB2LOOK Version "9.7" 
+-- Timestamp: 31-03-2013 13:02:52
+-- Database Name: AVATAR         
+-- Database Manager Version: DB2/NT64 Version 9.7.2        
+-- Database Codepage: 1208
+-- Database Collating Sequence is: IDENTITY
+
+
+CONNECT TO AVATAR;
+
+
+
+------------------------------------
+-- DDL Statements for TABLESPACES --
+------------------------------------
+
+
+CREATE USER TEMPORARY TABLESPACE "SYSTOOLSTMPSPACE" IN DATABASE PARTITION GROUP IBMCATGROUP 
+	 PAGESIZE 4096 MANAGED BY AUTOMATIC STORAGE 
+	 EXTENTSIZE 4
+	 PREFETCHSIZE AUTOMATIC
+	 BUFFERPOOL IBMDEFAULTBP
+	 OVERHEAD 7.500000
+	 TRANSFERRATE 0.060000 
+	 FILE SYSTEM CACHING  
+	 DROPPED TABLE RECOVERY OFF;
+
+
+-- Mimic tablespace
+
+ALTER TABLESPACE SYSCATSPACE
+      PREFETCHSIZE AUTOMATIC
+      OVERHEAD 7.500000
+      NO FILE SYSTEM CACHING 
+      AUTORESIZE YES 
+      TRANSFERRATE 0.060000;
+
+
+ALTER TABLESPACE TEMPSPACE1
+      PREFETCHSIZE AUTOMATIC
+      OVERHEAD 7.500000
+      FILE SYSTEM CACHING 
+      TRANSFERRATE 0.060000;
+
+
+ALTER TABLESPACE USERSPACE1
+      PREFETCHSIZE AUTOMATIC
+      OVERHEAD 7.500000
+      NO FILE SYSTEM CACHING 
+      AUTORESIZE YES 
+      TRANSFERRATE 0.060000;
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2ADMIN"."E_LOGIN"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2ADMIN"."E_LOGIN"  (
+		  "USERID" CHAR(50) NOT NULL , 
+		  "TIME_IN" TIME , 
+		  "TIME_OUT" TIME )   
+		 IN "USERSPACE1" ; 
+
+
+-- DDL Statements for primary key on Table "DB2ADMIN"."E_LOGIN"
+
+ALTER TABLE "DB2ADMIN"."E_LOGIN" 
+	ADD PRIMARY KEY
+		("USERID");
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2ADMIN"."LOGIN"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2ADMIN"."LOGIN"  (
+		  "UID" CHAR(13) NOT NULL , 
+		  "TIME_IN" TIME , 
+		  "TIME_OUT" TIME )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2ADMIN"."DEMISE"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2ADMIN"."DEMISE"  (
+		  "UID" CHAR(13) NOT NULL , 
+		  "DOD" DATE NOT NULL , 
+		  "PROOF" VARCHAR(100) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2ADMIN"."CONTACT"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2ADMIN"."CONTACT"  (
+		  "UID" CHAR(13) NOT NULL , 
+		  "ADDRESS" VARCHAR(255) , 
+		  "PHONE" VARCHAR(12) , 
+		  "EMAIL" VARCHAR(40) )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2ADMIN"."EMPLOYEE"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2ADMIN"."EMPLOYEE"  (
+		  "UID" CHAR(13) NOT NULL , 
+		  "E_ID" CHAR(50) NOT NULL , 
+		  "DESIGNATION" VARCHAR(20) NOT NULL , 
+		  "BRANCH" VARCHAR(20) NOT NULL , 
+		  "ACC_STATUS" CHAR(1) , 
+		  "TYPE" CHAR(1) )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2ADMIN"."OFFICIALS"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2ADMIN"."OFFICIALS"  (
+		  "USERID" CHAR(50) , 
+		  "E_ID" VARCHAR(50) , 
+		  "PASSWORD" CHAR(12) , 
+		  "TYPE" CHAR(1) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2ADMIN"."VIOLATIONS"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2ADMIN"."VIOLATIONS"  (
+		  "UID" CHAR(13) NOT NULL , 
+		  "TIME" TIME , 
+		  "TYPE" VARCHAR(10) , 
+		  "DESC" VARCHAR(255) )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2ADMIN"."STATE"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2ADMIN"."STATE"  (
+		  "UID" CHAR(13) NOT NULL , 
+		  "STATUS" CHAR(1) )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2ADMIN"."NRI"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2ADMIN"."NRI"  (
+		  "UID" CHAR(13) NOT NULL , 
+		  "STATE" VARCHAR(20) , 
+		  "COUNTRY" VARCHAR(20) )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2ADMIN"."COMPLAINTS"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2ADMIN"."COMPLAINTS"  (
+		  "UID" CHAR(13) NOT NULL , 
+		  "DESC" VARCHAR(255) , 
+		  "DATE" DATE )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2ADMIN"."MAILBOX"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2ADMIN"."MAILBOX"  (
+		  "TO" VARCHAR(40) NOT NULL , 
+		  "FROM" VARCHAR(40) NOT NULL , 
+		  "SUBJECT" VARCHAR(255) , 
+		  "CONTENT" VARCHAR(3500) , 
+		  "TIMING" TIME NOT NULL , 
+		  "STATE" CHAR(1) , 
+		  "DATE" DATE )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2ADMIN"."BRANCH"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2ADMIN"."BRANCH"  (
+		  "CODE" VARCHAR(20) , 
+		  "STATE" VARCHAR(20) , 
+		  "CITY" VARCHAR(20) )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2ADMIN"."NOMINAL_ROLL"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2ADMIN"."NOMINAL_ROLL"  (
+		  "UID" CHAR(13) NOT NULL , 
+		  "FNAME" VARCHAR(20) , 
+		  "MNAME" VARCHAR(20) , 
+		  "LNAME" VARCHAR(20) , 
+		  "DOB" DATE , 
+		  "AGE" INTEGER , 
+		  "GENDER" CHAR(1) , 
+		  "GUARDIAN" VARCHAR(40) , 
+		  "C_MODE" CHAR(1) , 
+		  "ADDRESS" VARCHAR(255) , 
+		  "PASSWORD" CHAR(12) )   
+		 IN "USERSPACE1" ; 
+
+
+-- DDL Statements for primary key on Table "DB2ADMIN"."NOMINAL_ROLL"
+
+ALTER TABLE "DB2ADMIN"."NOMINAL_ROLL" 
+	ADD PRIMARY KEY
+		("UID");
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2ADMIN"."IDENTIFICATION"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2ADMIN"."IDENTIFICATION"  (
+		  "UID" CHAR(13) NOT NULL , 
+		  "PHOTO" BLOB(150000) LOGGED NOT COMPACT , 
+		  "FP1" BLOB(150000) LOGGED NOT COMPACT , 
+		  "FP2" BLOB(150000) LOGGED NOT COMPACT , 
+		  "FP3" BLOB(150000) LOGGED NOT COMPACT , 
+		  "FP4" BLOB(150000) LOGGED NOT COMPACT , 
+		  "FP5" BLOB(150000) LOGGED NOT COMPACT , 
+		  "FP6" BLOB(150000) LOGGED NOT COMPACT , 
+		  "FP7" BLOB(150000) LOGGED NOT COMPACT , 
+		  "FP8" BLOB(150000) LOGGED NOT COMPACT , 
+		  "FP9" BLOB(150000) LOGGED NOT COMPACT , 
+		  "FP0" BLOB(150000) LOGGED NOT COMPACT , 
+		  "PROOF1" BLOB(200000) LOGGED NOT COMPACT , 
+		  "PROOF2" BLOB(200000) LOGGED NOT COMPACT )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2ADMIN"."UPDATE_FORM"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2ADMIN"."UPDATE_FORM"  (
+		  "UID" CHAR(13) NOT NULL , 
+		  "FNAME" VARCHAR(20) , 
+		  "MNAME" VARCHAR(20) , 
+		  "LNAME" VARCHAR(20) , 
+		  "P_ADDR" VARCHAR(255) , 
+		  "R_ADDR" VARCHAR(255) , 
+		  "C_MODE" CHAR(1) , 
+		  "PHOTO" BLOB(150000) LOGGED NOT COMPACT , 
+		  "MOB_NO" VARCHAR(12) , 
+		  "EMAIL" VARCHAR(40) , 
+		  "PROOF" BLOB(200000) LOGGED NOT COMPACT )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2ADMIN"."REG_FORM"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2ADMIN"."REG_FORM"  (
+		  "REG_NO" CHAR(12) NOT NULL , 
+		  "DOR" DATE , 
+		  "FNAME" VARCHAR(20) , 
+		  "MNAME" VARCHAR(20) , 
+		  "LNAME" VARCHAR(20) , 
+		  "DOB" DATE , 
+		  "GENDER" CHAR(1) NOT NULL , 
+		  "GUARDIAN" VARCHAR(40) , 
+		  "C_MODE" CHAR(1) NOT NULL , 
+		  "EMAIL" VARCHAR(40) , 
+		  "MOB_NO" VARCHAR(12) , 
+		  "AGE" SMALLINT , 
+		  "P_ADDR" VARCHAR(255) , 
+		  "R_ADDR" VARCHAR(255) , 
+		  "PHOTO" BLOB(150000) LOGGED NOT COMPACT , 
+		  "FP1" BLOB(150000) LOGGED NOT COMPACT , 
+		  "FP2" BLOB(150000) LOGGED NOT COMPACT , 
+		  "FP3" BLOB(150000) LOGGED NOT COMPACT , 
+		  "FP4" BLOB(150000) LOGGED NOT COMPACT , 
+		  "FP5" BLOB(150000) LOGGED NOT COMPACT , 
+		  "FP6" BLOB(150000) LOGGED NOT COMPACT , 
+		  "FP7" BLOB(150000) LOGGED NOT COMPACT , 
+		  "FP8" BLOB(150000) LOGGED NOT COMPACT , 
+		  "FP9" BLOB(150000) LOGGED NOT COMPACT , 
+		  "FP0" BLOB(150000) LOGGED NOT COMPACT , 
+		  "PROOF1" BLOB(200000) LOGGED NOT COMPACT , 
+		  "PROOF2" BLOB(200000) LOGGED NOT COMPACT , 
+		  "MODERATOR_ID" VARCHAR(50) )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2ADMIN"."FINANCE"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2ADMIN"."FINANCE"  (
+		  "UID" CHAR(13) NOT NULL , 
+		  "SERVICE" VARCHAR(20) , 
+		  "EMAIL" VARCHAR(75) , 
+		  "PASSWORD" VARCHAR(20) )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2ADMIN"."USER_INDEX"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2ADMIN"."USER_INDEX"  (
+		  "KEYWORD" VARCHAR(54) , 
+		  "UID" CHAR(13) )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "DB2ADMIN"."UID_VISITED"
+------------------------------------------------
+ 
+
+CREATE TABLE "DB2ADMIN"."UID_VISITED"  (
+		  "UID" CHAR(13) )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------
+-- Authorization statement on table space 
+---------------------------------------
+
+ 
+GRANT USE OF TABLESPACE "SYSTOOLSTMPSPACE" TO  PUBLIC   ;
+
+GRANT USE OF TABLESPACE "SYSTOOLSTMPSPACE" TO  PUBLIC   ;
+
+COMMIT WORK;
+
+CONNECT RESET;
+
+TERMINATE;
+
+-- Specified SCHEMA is: DB2ADMIN
+-- Creating DDL for table(s)
+
+-- Schema name is ignored for the Federated Section
+;
