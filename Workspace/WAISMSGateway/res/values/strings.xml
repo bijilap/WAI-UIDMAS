@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, MainActivity!</string>
+    <string name="app_name">WAI SMS </string>
+    <string name="send_sms">Send SMS</string>
+    <string name="stop_string">Stop</string>
+    <string name="title">WAI SMS Gateway</string>
+    <string name="description">WAI SMS Gateway is an android app for sending SMS from WAI application. It uses mobile devices, capable of sending SMS.</string>
+</resources>

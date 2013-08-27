@@ -1,0 +1,582 @@
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #FFFFFF url(images/img01.gif) repeat-x;
+	font: normal small "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #666666;
+}
+
+h1, h2, h3 {
+	color: #586BAA;
+}
+
+h2 {
+}
+
+h3 {
+}
+
+p, blockquote, ul, ol {
+}
+
+p {
+}
+
+blockquote {
+	margin-left: 3em;
+}
+
+ul {
+	margin-left: 3em;
+}
+
+ul li {
+}
+
+ol {
+	margin-left: 3em;
+}
+
+ol li {
+}
+
+a {
+	color: #586BAA;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+img {
+}
+
+/* Boxed Style */
+
+.boxed {
+	margin-bottom: 20px;
+}
+
+.boxed .title {
+	height: 31px;
+	padding: 9px 0 0 20px;
+	background: #6FBE6E url(images/img05.gif) repeat-x;
+	font-size: 1.2em;
+	color: #CC0000;
+}
+
+.boxed .content {
+	padding: 20px 20px 40px 20px;
+	background: url(images/img06.gif) repeat-x;
+}
+
+/* Post */
+
+.post {
+}
+
+.post .title {
+	padding: 5px 0 0 20px;
+	font-size: 2em;
+	font-weight: normal;
+}
+
+.post .date {
+}
+
+.post .date .month {
+}
+
+.post .date .day {
+}
+
+.post .date .year {
+}
+
+.post .meta {
+}
+
+.post .meta p {
+}
+
+.post .story {
+	padding: 20px 20px 10px 20px;
+	background: url(images/img07.gif) repeat-x;
+}
+
+.post h3 {
+}
+
+.post .story p, .post .story blockquote, .post .story ul, .post .story ol {
+	margin-bottom: 1.5em;
+	line-height: 180%;
+}
+
+/* Header */
+
+#header {
+	width: 740px;
+	height: 150px;
+	margin: 0 auto;
+}
+
+/*Logout*/
+.logout {
+	width: 740px;
+	right: 80%;
+	margin: 0 auto;
+}
+
+#logout {
+	width: 88px;
+	height: 47px;
+	margin: 0 auto;
+}
+
+#logout ul {
+	margin: 0;
+	padding-top: 25px;
+	list-style: none;
+}
+
+#logout li {
+	display: inline;
+}
+
+#logout a {
+	display: block;
+	float: left;
+	height: 32px;
+	margin-left: 1px;
+	padding: 13px 25px 0 25px;
+	background: #FFFFFF url(images/img02.gif) repeat-x;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	color: #586BAA;
+}
+
+#logout a:hover {
+	background-image: url(images/img03.gif);
+	border-color: #FEDA8D;
+	color: #CC0000;
+}
+
+#logout .active a {
+	height: 36px;
+	margin-top: -4px;
+	background-image: url(images/img04.gif);
+	border: 1px solid #479AC6;
+	border-bottom: none;
+	font-weight: bold;
+	color: #479AC6;
+}
+
+
+
+/* Menu */
+
+#menu {
+	width: 740px;
+	height: 90px;
+	margin: 0 auto;
+}
+
+#menu ul {
+	margin: 0;
+	padding-top: 25px;
+	list-style: none;
+}
+
+#menu li {
+	display: inline;
+}
+
+#menu a {
+	display: block;
+	float: left;
+	height: 32px;
+	margin-left: 1px;
+	padding: 13px 25px 0 25px;
+	background: #FFFFFF url(images/img02.gif) repeat-x;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	color: #586BAA;
+}
+
+#menu a:hover {
+	background-image: url(images/img03.gif);
+	border-color: #FEDA8D;
+	color: #CC0000;
+}
+
+#menu .active a {
+	height: 36px;
+	margin-top: -4px;
+	background-image: url(images/img04.gif);
+	border: 1px solid #479AC6;
+	border-bottom: none;
+	font-weight: bold;
+	color: #479AC6;
+}
+
+/* Logo */
+
+#logo {
+	width: 740px;
+	height: 60px;
+	margin: 0 auto;
+}
+
+#logo h1 {
+	float: left;
+	letter-spacing: -2px;
+	font-size: 36px;
+	font-weight: normal;
+}
+
+#logo h1 a {
+}
+
+#logo h2 {
+	float: left;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+#logo h2 a {
+}
+
+#logo a {
+	text-decoration: none;
+	text-transform: lowercase;
+	font-style: italic;
+	color: #479AC6;
+}
+
+/* Content */
+
+#content {
+	width: 740px;
+	margin: 0 auto;
+}
+
+#extra {
+}
+
+/* Content > Main */
+
+#main {
+	float: right;
+	width: 505px;
+}
+
+#main a {
+}
+
+/* Content > Main > Welcome */
+
+#welcome {
+}
+
+/* Content > Main > Example */
+
+#example {
+}
+
+/* Content > Sidebar */
+
+#sidebar {
+	float: left;
+	width: 220px;
+}
+
+#sidebar a {
+}
+
+/* Content > Sidebar > Login */
+
+#login {
+}
+
+#login form {
+}
+
+#login fieldset {
+	border: none;
+}
+
+#login legend {
+	display: none;
+}
+
+#login label {
+	font-size: x-small;
+	font-weight: bold;
+}
+
+#login input {
+	margin-bottom: 5px;
+}
+
+#inputtext1, #inputtext2 {
+	width: 170px;
+	padding: 2px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #666666;
+}
+
+#inputsubmit1 {
+}
+
+/* Content > Sidebar > Updates*/
+
+#updates {
+}
+
+#updates ul {
+	margin: 0;
+	list-style: none;
+}
+
+#updates h3 {
+	margin: 0;
+	font: bold x-small Verdana, Arial, Helvetica, sans-serif;
+}
+
+#updates p {
+	margin-bottom: 1.4em;
+	font-size: smaller;
+	line-height: normal;
+}
+
+/* Content > Sidebar > Partners*/
+
+#partners {
+}
+
+#partners .content {
+	padding: 10px 0;
+}
+
+#partners ul {
+	margin: 0;
+	border-bottom: 1px solid #D1BC5C;
+	list-style: none;
+	line-height: normal;
+}
+
+#partners li {
+	padding: 10px;
+	border-top: 1px solid #D1BC5C;
+}
+
+/* Footer */
+
+#footer {
+	clear: both;
+	width: 740px;
+	margin: 0 auto;
+	padding: 30px 0;
+	background: url(images/img08.gif) repeat-x;
+}
+
+#footer p {
+	margin: 0;
+	text-align: center;
+	font-size: x-small;
+}
+
+/* Footer > Legal */
+
+#legal {
+}
+
+/* Footer > Links */
+
+#links {
+}
+div.logout {
+	position:absolute;
+	padding-right:5px;
+	top:24px;
+	left:949px;
+	z-index:5;
+	text-align:center;
+	width:58px;
+}
+/*---------------contact_form------------------*/
+.contact_form{
+	width:400px;
+	float:left;
+	padding:25px;
+	margin:20px 0 0 15px;
+	_margin:20px 0 0 5px;
+	border:1px #DFD1D2 dashed;
+	position:relative;
+}
+.form_row{
+width:335px;
+_width:355px;
+clear:both;
+padding:10px 0 10px 0;
+_padding:5px 0 5px 0;
+color:#a53d17;
+}
+label.contact{
+width:75px;
+float:left;
+font-size:12px;
+text-align:right;
+padding:4px 5px 0 0;
+color: #333333;
+}
+input.contact_input{
+width:253px;
+height:18px;
+background-color:#fff;
+color:#999999;
+border:1px #DFDFDF solid;
+float:left;
+}
+textarea.contact_textarea{
+width:253px;
+height:120px;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+color: #999999;
+background-color:#fff;
+border:1px #DFDFDF solid;
+float:left;
+}
+input.register{
+width:71px;
+height:25px;
+border:none;
+cursor:pointer;
+text-align:center;
+float:right;
+color:#FFFFFF;
+background:url(file:///D|/Sites/Avatar/images/register_bt.gif) no-repeat center;
+}
+a.contact{
+width:53px;
+height:24px;
+display:block;
+float:right;
+margin:0 0 0 10px;
+background:url(file:///D|/Sites/Avatar/images/contact_bt.gif) no-repeat center;
+text-decoration:none;
+text-align:center;
+line-height:24px;
+color:#fff;
+}
+a.checkout{
+width:71px;
+height:25px;
+display:block;
+float:right;
+margin:10px 30px 0 10px;
+background:url(file:///D|/Sites/Avatar/images/register_bt.gif) no-repeat center;
+text-decoration:none;
+text-align:center;
+line-height:25px;
+color:#fff;
+}
+a.continue{
+width:71px;
+height:25px;
+display:block;
+float:left;
+margin:10px 0 0 0px;
+background:url(file:///D|/Sites/Avatar/images/register_bt.gif) no-repeat center;
+text-decoration:none;
+text-align:center;
+line-height:25px;
+color:#fff;
+}
+.terms{
+padding:0 0 0 80px;
+}
+.form_subtitle{
+position:absolute;
+top:-11px;
+left:7px;
+width:auto;
+height:20px;
+background-color:#2E7D8A;
+text-align:center;
+padding:0 7px 0 7px;
+color:#FFFFFF;
+font-size:11px;
+line-height:20px;
+}
+/*--------------cart_table-------------*/
+.cart_table{
+width:440px;
+border:1px #CCCCCC solid;
+text-align:center;
+}
+tr.cart_title{
+background-color:#DFDFDF;
+}
+td{
+padding:3px;
+}
+td.cart_total{
+text-align:right;
+padding:5px 15px 5px 0;
+}
+img.cart_thumb{
+border:1px #b2b2b2 solid;
+padding:2px;
+}
+/*--------------*/
+div.pagination {
+width:420px;
+padding:5px;
+margin:5px;
+text-align:center;
+float:left;
+clear:both;
+font-size:10px;
+}
+
+div.pagination a {
+padding: 2px 5px 2px 5px;
+margin-right: 2px;
+border: 1px solid #2E7D8A;
+text-decoration: none; 
+color: #2E7D8A;
+}
+div.pagination a:hover, div.pagination a:active {
+border:1px solid #2E7D8A;
+color: #fff;
+background-color: #2E7D8A;
+}
+div.pagination span.current {
+padding: 2px 5px 2px 5px;
+margin-right: 2px;
+border: 1px solid #2E7D8A;
+font-weight: bold;
+background-color: #2E7D8A;
+color: #FFF;
+}
+div.pagination span.disabled {
+padding: 2px 5px 2px 5px;
+margin-right: 2px;
+border: 1px solid #f3f3f3;
+color: #ccc;
+}#content #main #example .story p strong {
+	color: #666666;
+}

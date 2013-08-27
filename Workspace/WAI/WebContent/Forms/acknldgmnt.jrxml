@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DataSourceReport" pageWidth="595" pageHeight="842" columnWidth="515" leftMargin="40" rightMargin="40" topMargin="50" bottomMargin="50" >
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="138"/>
+	<style name="Arial_Normal" isDefault="true" fontName="Arial" fontSize="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+	<style name="Arial_Bold" fontName="Arial" fontSize="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+	<style name="Arial_Italic" fontName="Arial" fontSize="12" isBold="false" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-Oblique" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+	<field name="REG_NO" class="java.lang.String"/>
+	<field name="NAME" class="java.lang.String"/>
+	<field name="DOB" class="java.lang.String"/>
+	<field name="R_ADDR" class="java.lang.String"/>
+	<field name="GENDER" class="java.lang.String"/>
+	<field name="IMAGE" class="java.lang.String"/>
+	<field name="DOR" class="java.lang.String"/>
+	<field name="MODERATOR_ID" class="java.lang.String"/>
+	<title>
+		<band height="90" splitType="Stretch">
+			<frame>
+				<reportElement  mode="Opaque" x="0" y="0" width="515" height="78" backcolor="#000000"/>
+				<staticText>
+					<reportElement  x="186" y="20" width="147" height="43" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[AVATAR]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="20" splitType="Stretch"/>
+	</pageHeader>
+	<detail>
+		<band height="516" splitType="Stretch">
+			<textField bookmarkLevel="2">
+				<reportElement  x="87" y="61" width="203" height="15"/>
+				<box leftPadding="10" rightPadding="10"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{REG_NO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  style="Arial_Bold" mode="Opaque" x="22" y="61" width="70" height="15" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Reg. No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="Arial_Bold" mode="Opaque" x="113" y="15" width="279" height="25" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Acknowledgement Sheet]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Arial_Bold" mode="Opaque" x="307" y="61" width="85" height="15" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Auth. ID]]></text>
+			</staticText>
+			<textField bookmarkLevel="2">
+				<reportElement x="368" y="61" width="126" height="15"/>
+				<box leftPadding="10" rightPadding="10"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{MODERATOR_ID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  style="Arial_Bold" mode="Opaque" x="12" y="107" width="70" height="15" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<textField bookmarkLevel="2">
+				<reportElement  x="97" y="107" width="397" height="15"/>
+				<box leftPadding="10" rightPadding="10"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{NAME}]]></textFieldExpression>
+			</textField>
+			<textField bookmarkLevel="2">
+				<reportElement  x="97" y="163" width="397" height="90"/>
+				<box leftPadding="10" rightPadding="10"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R_ADDR}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  style="Arial_Bold" mode="Opaque" x="12" y="163" width="70" height="30" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Residential Address]]></text>
+			</staticText>
+			<textField bookmarkLevel="2">
+				<reportElement x="97" y="135" width="155" height="15"/>
+				<box leftPadding="10" rightPadding="10"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{DOB}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Arial_Bold" mode="Opaque" x="12" y="135" width="70" height="15" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[DOB]]></text>
+			</staticText>
+			<textField bookmarkLevel="2">
+				<reportElement x="406" y="135" width="65" height="15"/>
+				<box leftPadding="10" rightPadding="10"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{GENDER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Arial_Bold" mode="Opaque" x="340" y="135" width="52" height="15" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="Arial_Bold" mode="Opaque" x="69" y="306" width="70" height="30" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Photo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  style="Arial_Bold" mode="Opaque" x="313" y="467" width="70" height="20" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Arial_Bold" mode="Opaque" x="322" y="324" width="172" height="124" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[	I, accept all terms  and all conditions. This only an acknowledgment not the real Avatar Card]]></text>
+			</staticText>
+			<image>
+				<reportElement  x="42" y="342" width="132" height="160"/>
+				<imageExpression><![CDATA[$F{IMAGE}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>
